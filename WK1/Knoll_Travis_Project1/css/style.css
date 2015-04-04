@@ -1,0 +1,37 @@
+/* Travis Knoll*/
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#form {
+    width: 600px;
+    height: 500px;
+    padding-bottom: 20px;
+}
+form {
+    margin: auto;
+    width: 550px;
+    height: 150px;
+    font-family: 'Yesteryear', arial, helvetica, sans;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: bold;
+
+}
+
+input {
+    width: 375px;
+    display: block;
+    height: 25px;
+}
+
+#notes {
+    width: 550px;
+    height: 300px;
+}
+#user p {
+    padding-top: 35px;
+}
+#user button {
+    float: right;
+}
