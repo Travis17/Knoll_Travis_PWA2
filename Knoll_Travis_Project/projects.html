@@ -1,0 +1,167 @@
+<!doctype html>
+
+<!--
+Travis Knoll
+
+-->
+
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Note Cloud</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!--  Mobile viewport optimized: j.mp/bplateviewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS concatenated and minified via ant build script-->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- end CSS-->
+</head>
+
+<body>
+<div class="container">
+    <!-- header -->
+    <div class="header">
+        <a href="index.html"><img class="logo" src="images/CB_Logo2.pdf.png" width="500" height="110"></a>
+    </div>
+    <!-- header -->
+
+    <header>
+
+<div class="userid">Welcome User:
+</div>
+        <div class="logoutbox">
+        <button class="dashboard">Dashboard</button>
+        <button class="Logout">Logout</button>
+    </div>
+    </header>
+
+     <div class="welcome">
+        <p><a href="#" class="modalClick">Add a new Note+</a></p>
+     </div>
+
+<div id="projectlist">
+    <h1>Current Notes on Note Cloud</h1>
+    <div class="projects">
+    </div>
+</div>
+<!-- modal overlay -->
+    <div id="overlay">
+        <div id="modal">
+            <span class="close">x</span>
+            <h3 class="header">Add A Note</h3>
+            <!-- modal window status -->
+ <div id="add">
+     <form id="addForm">
+         <label>Project Name:</label>
+         <input name="projectName" type="text" id="projectName"/>
+         <br>
+         <label>Project Description: </label>
+         <input name="projectDescription" type="text" id="projectDescription"/><br>
+         <label>Project Due Date: </label>
+         <input name="projectDueDate" type="text" id="projectDueDate"/><br>
+         <label name="status">Select status:</label>
+
+         <label class="mystatus">
+             <input type="radio" name="status" id="urgent"><img src="images/Urgent.png" width="59" height="57"></label>
+         </label>
+
+         <label class="mystatus">
+             <input type="radio" name="status" id="normal"><img src="images/Normal.png" width="59" height="57"></label>
+         </label>
+
+         <label class="mystatus">
+             <input type="radio" name="status" id="delayed"><img src="images/Delayed.png" width="59" height="57"></label>
+         </label>
+
+         <label class="mystatus">
+             <input type="radio" name="status" id="complete"><img src="images/completed.png" width="59" height="57"></label>
+         </label>
+
+        <br>
+         <input name="addButton" type="button" id="addButton" value="Add"/>
+        </form>
+
+    </div>
+        </div>
+    </div>
+<!-- table -->
+<div id="table">
+<table border="7" style="background-color:#FFFFFF;border-collapse:collapse;border:7px solid #99CCFF;color:#000000;width:100%" cellpadding="3" cellspacing="3">
+    <h4>Your recent Notes</h4>
+    <tr>
+        <td>Note 1</td>
+        <td>Note 1</td>
+    </tr>
+    <tr>
+        <td>Note 2</td>
+        <td>Note 2</td>
+    </tr>
+    <tr>
+        <td>Note 3</td>
+        <td>Note 3</td>
+    </tr>
+    <tr>
+        <td>Note 4</td>
+        <td>Note 4</td>
+    </tr>
+    <tr>
+        <td>Note 5</td>
+        <td>Note 5</td>
+    </tr>
+    <tr>
+        <td>Note 6</td>
+        <td>Note 6</td>
+    </tr>
+    <tr>
+        <td>Note 7</td>
+        <td>Note 7</td>
+    </tr>
+    <tr>
+        <td>Note 8</td>
+        <td>Note 8</td>
+    </tr>
+</table>
+</div>
+
+    <!-- a quick note about the Note Cloud -->
+    <div id="notes">
+        <h3>Cloud Notes</h3>
+        <p>You can take you notes with you or share them in a group and have them progressively updated. Either share with the world or just remember to do your laundry.</p>
+    </div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+<!-- jquery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- plugins -->
+
+
+<!-- main -->
+<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
