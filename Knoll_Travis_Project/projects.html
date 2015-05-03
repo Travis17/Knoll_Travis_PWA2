@@ -5,7 +5,7 @@ Travis Knoll
 
 -->
 
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
 
     <meta charset="utf-8">
@@ -19,15 +19,21 @@ Travis Knoll
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- CSS concatenated and minified via ant build script-->
-    <link rel="stylesheet" href="css/style.css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="js/plugins/jquery-ui-1.11.4-2.custom/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="js/plugins/jquery-ui-1.11.4-2.custom/jquery-ui.structure.min.css" rel="stylesheet" type="text/css">
+    <link href="js/plugins/jquery-ui-1.11.4-2.custom/jquery-ui.theme.min.css" rel="stylesheet" type="text/css">
+
     <!-- end CSS-->
 </head>
-
 <body>
+
+
+
 <div class="container">
     <!-- header -->
     <div class="header">
-        <a href="index.html"><img class="logo" src="images/CB_Logo2.pdf.png" width="500" height="110"></a>
+        <img class="logo" src="images/CB_Logo2.pdf.png" width="500" height="110">
     </div>
     <!-- header -->
 
@@ -48,7 +54,7 @@ Travis Knoll
 
 <div id="projectlist">
     <h1>Current Notes on Note Cloud</h1>
-    <div class="projects">
+    <div class="projects" id="sortable">
     </div>
 </div>
 <!-- modal overlay -->
@@ -65,7 +71,7 @@ Travis Knoll
          <label>Project Description: </label>
          <input name="projectDescription" type="text" id="projectDescription"/><br>
          <label>Project Due Date: </label>
-         <input name="projectDueDate" type="text" id="projectDueDate"/><br>
+         <input name="projectDueDate" type="text" id="projectDueDate" class="mydatepicker"/><br>
          <label name="status">Select status:</label>
 
          <label class="mystatus">
@@ -92,43 +98,6 @@ Travis Knoll
         </div>
     </div>
 <!-- table -->
-<div id="table">
-<table border="7" style="background-color:#FFFFFF;border-collapse:collapse;border:7px solid #99CCFF;color:#000000;width:100%" cellpadding="3" cellspacing="3">
-    <h4>Your recent Notes</h4>
-    <tr>
-        <td>Note 1</td>
-        <td>Note 1</td>
-    </tr>
-    <tr>
-        <td>Note 2</td>
-        <td>Note 2</td>
-    </tr>
-    <tr>
-        <td>Note 3</td>
-        <td>Note 3</td>
-    </tr>
-    <tr>
-        <td>Note 4</td>
-        <td>Note 4</td>
-    </tr>
-    <tr>
-        <td>Note 5</td>
-        <td>Note 5</td>
-    </tr>
-    <tr>
-        <td>Note 6</td>
-        <td>Note 6</td>
-    </tr>
-    <tr>
-        <td>Note 7</td>
-        <td>Note 7</td>
-    </tr>
-    <tr>
-        <td>Note 8</td>
-        <td>Note 8</td>
-    </tr>
-</table>
-</div>
 
     <!-- a quick note about the Note Cloud -->
     <div id="notes">
@@ -147,8 +116,11 @@ Travis Knoll
 
 <!-- jquery -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<!-- plugins -->
 
+
+<!-- plugins -->
+<script type="text/javascript" src="js/plugins/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="js/plugins/jquery-ui-1.11.4-2.custom/jquery-ui.min.js"></script>
 
 <!-- main -->
 <script type="text/javascript" src="js/main.js"></script>

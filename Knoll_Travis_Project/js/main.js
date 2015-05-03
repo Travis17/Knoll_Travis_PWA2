@@ -64,6 +64,17 @@
          .css({ top: mousey, left: mousex })
 
  });
+    /* Buttons*/
+    $( "input[type=submit], a, button" )
+        .button()
+        .click(function( event ) {
+            event.preventDefault();
+        });
+
+    /* Date picker */
+
+    $( ".mydatepicker" ).datepicker();
+
 /* Log In */
         $('#signinButton').click(function(){
             var user = $('#user').val();
@@ -136,6 +147,19 @@
         window.location.assign('admin.html');
     });
 
+/* Admin page buttons */
+    $('#projectsbtn').on('click', function(e){
+        e.preventDefault();
+        window.location.assign('projects.html');
+    });
+
+    /* Registration page button */
+
+    $('#signUp').on('click', function(e){
+        e.preventDefault();
+        window.location.assign('registration.html');
+    });
+
 /* Projects page logout button */
 	$('.logOut').on('click', function(e){
         e.preventDefault();
@@ -181,6 +205,10 @@ $('#addButton').on('click', function(){
         }
     });
 });
+    /* sortable */
+
+$("#sortable").sortable();
+    $("#sortable").disableSelection();
 
     /* get the projects */
  var projects = function(){
@@ -196,8 +224,9 @@ $('#addButton').on('click', function(){
                      var result = response.projects[i];
 
                      $(".projects").append(
-                         '<div style="border:1px solid black">' +
-                         " <input class='projectid' type='hiddne' value='" + result.id + "'>" +
+                         //'<div style="border:1px solid black">' +
+                         '<div id="sortable" class="ui-state-default">' +
+                         " <input class='projectid' type='hidden' value='" + result.id + "'>" +
                          " Project Name: " + result.projectName + "<br>" +
                          " Project Description: " + result.projectDescription + "<br>" +
                          " Project Status: " + result.status + "<br>"
@@ -207,18 +236,15 @@ $('#addButton').on('click', function(){
                      );
 
                  };
-                 $(".projects").on('click', function(e) {
-                     e.preventDefault();
-                     $("button:first").remove();
-
-
+                 $(".deletebtn").on('click', function(e) {
+                    var pid = $(this).parent().find(".projectid").val();
 
 
                      console.log('test delete');
                      $.ajax({
                          url: 'xhr/delete_project.php',
                          data: {
-                             projectID: result.id
+                             projectID: pid
                          },
                          type: 'POST',
                          dataType: 'json',
@@ -243,6 +269,15 @@ $('#addButton').on('click', function(){
      })
  }
     projects();
+/* Accordion function */
+    $(function() {
+        $( "#accordion" ).accordion();
+    });
+
+
+    $( "#tabbed" ).tabs({
+        event: "mouseover"
+    });
 
 })(jQuery); // end private scope
 

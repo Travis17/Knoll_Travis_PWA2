@@ -24,7 +24,12 @@ Travis Knoll
 	
 	<!-- CSS concatenated and minified via ant build script-->
 	<link rel="stylesheet" href="css/style.css">
-	<!-- end CSS-->
+    <link href="js/plugins/jquery-ui-1.11.4-2.custom/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="js/plugins/jquery-ui-1.11.4-2.custom/jquery-ui.structure.min.css" rel="stylesheet" type="text/css">
+    <link href="js/plugins/jquery-ui-1.11.4-2.custom/jquery-ui.theme.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- end CSS-->
 </head>
 
 <body>
@@ -36,10 +41,12 @@ Travis Knoll
 
         <!-- header -->
         <div class="header">
-            <a href="index.html"><img class="logo" src="images/CB_Logo2.pdf.png" width="500" height="110"></a>
+            <img class="logo" src="images/CB_Logo2.pdf.png" width="500" height="110">
         </div>
         <!-- header -->
-<!-- form 2 -->
+
+
+        <!-- form 2 -->
         <div id="login">
             <form id="loginForm">
                 <label>Username:</label>
@@ -56,16 +63,33 @@ Travis Knoll
         <!-- call to action -->
         <div id="join">
             <h3>Thank you for taking the time to come to our site click the button to join!</h3>
-            <a href="registration.html" class="masterTooltip" title="sign up"><button>sign up</button></a>
+                <button class="masterTooltip" title="sign up" id="signUp">sign up</button>
         </div>
         <!-- a quick note about the Note Cloud -->
+
+
+
+        <div id="tabbed">
+            <ul>
+                <li><a href="#tabs-1">Write</a></li>
+                <li><a href="#tabs-2">Save</a></li>
+                <li><a href="#tabs-3">Share</a></li>
+            </ul>
+            <div id="tabs-1">
+                <p>Write all the notes that you want. On the go or while planning out your day. </p>
+            </div>
+            <div id="tabs-2">
+                <p>If you're hit by a power cut, you'll lose all of your changes since your last save. The game console can store up to eight saves on a single cartridge.</p>
+            </div>
+            <div id="tabs-3">
+                <p>Share your notes independently or in an association of user groups, professionals with training, technical content and networking ...</p>
+            </div>
+        </div>
         <div id="notes">
             <h3>Cloud Notes</h3>
             <p>You can take you notes with you or share them in a group and have them progressively updated. Either share with the world or just remember to do your laundry.</p>
         </div>
     </div>
-	
-	
 
 
 
@@ -73,11 +97,14 @@ Travis Knoll
 
 
 
-    <!-- jquery -->
+
+
+<!-- jquery -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<!-- plugins -->
+<script type="text/javascript" src="js/plugins/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="js/plugins/jquery-ui-1.11.4-2.custom/jquery-ui.min.js"></script>
 
-	
 	<!-- main -->
 	<script type="text/javascript" src="js/main.js"></script>
   

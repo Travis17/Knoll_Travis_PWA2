@@ -20,6 +20,10 @@ Travis Knoll
 
     <!-- CSS concatenated and minified via ant build script-->
     <link rel="stylesheet" href="css/style.css">
+    <link href="js/plugins/jquery-ui-1.11.4-2.custom/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="js/plugins/jquery-ui-1.11.4-2.custom/jquery-ui.structure.min.css" rel="stylesheet" type="text/css">
+    <link href="js/plugins/jquery-ui-1.11.4-2.custom/jquery-ui.theme.min.css" rel="stylesheet" type="text/css">
+
     <!-- end CSS-->
 </head>
 
@@ -29,7 +33,7 @@ Travis Knoll
 <div class="container">
     <!-- header -->
     <div class="header">
-        <a href="index.html"><img class="logo" src="images/CB_Logo2.pdf.png" width="500" height="110"></a>
+        <img class="logo" src="images/CB_Logo2.pdf.png" width="500" height="110">
     </div>
     <!-- header -->
 
@@ -38,41 +42,64 @@ Travis Knoll
         <h4>Welcome User</h4>
         <button class="logOut">Log out</button>
     </div>
-
-    <div id="welcome">
-    <h1>Welcome to  your Note Cloud</h1>
-    </div>
-        <!-- tooltip nav -->
+<!-- accordion panel -->
+    <div id="accordion">
+        <h3>Projects</h3>
         <div>
-            <ul id="tabs-nav">
             <li><a href="#projects" class="masterTooltip" title="Projects">
                 <img src="images/write.jpg" width="100" height="77" id="projects"></a></li>
+            <p id="projects">
+                Well hello and welcome to cloud notes. Please take a moment to check out your notes and create or add a new note.<br><br>
+                Go to my projects...<button id="projectsbtn" class="masterTooltip" title="Projects">Projects</button>
+            </p>
+            <ul>
+                <li>Create a new note</li>
+                <li>Schedule a time</li>
+                <li>Make the project urgent</li>
+                <li>Tell a friend and share</li>
+            </ul>
+        </div>
+        <h3>Tasks</h3>
+        <div>
             <li><a href="#tasks" class="masterTooltip" title="Tasks">
                 <img src="images/write.jpg" width="100" height="77" id="tasks"></a></li>
+            <p id="tasks">
+                Well hello you have a number of things on you mind these days. Take a moment to look at you sorted tasks.<br><br>
+                Go to my tasks... <button class="taskbtn" class="masterTooltip" title="Tasks">Tasks</button>
+            </p>
+
+        </div>
+        <h3>Users</h3>
+        <div>
             <li><a href="#users" class="masterTooltip" title="Users">
                 <img src="images/write.jpg" width="100" height="77" id="users"></a></li>
-             </ul>
+            <p id="users">
+                Well hello and don't forget to share with you user your current notes to keep everyone up to date with your notes.
+                <br><br>
+                Go to my users... <button class="usersbtn" class="masterTooltip" title="Users">Users</button>
+            </p>
 
-<!-- projects, tasks, users, Toggle -->
-    <div id="tabs">
-        <p id="projects">
-            Well hello and welcome to cloud notes. Please take a moment to check out your notes and create or add a new note.<br><br>
-            Go to my projects... <a href="projects.html" class="masterTooltip" title="Projects"><button class="projectsbtn">Projects</button></a>
-        </p>
-        <p id="tasks">
-            Well hello you have a number of things on you mind these days. Take a moment to look at you sorted tasks.<br><br>
-            Go to my tasks... <button class="taskbtn" class="masterTooltip" title="Tasks">Tasks</button>
-        </p>
-        <p id="users">
-            Well hello and don't forget to share with you user your current notes to keep everyone up to date with your notes.
-            <br><br>
-            Go to my users... <button class="usersbtn" class="masterTooltip" title="Users">Users</button>
-        </p>
-
-
-
+        </div>
+        <h3>Future Notes</h3>
+        <div>
+            <p>
+                You can create and schedule more notes for the future of your personal life and you group business behavior.
+            </p>
+            <p>
+                Stay in touch with others and share a note in the cloud!
+            </p>
+        </div>
     </div>
-    </div>
+
+
+
+
+
+
+
+
+
+
 
 
     <!-- toggle to project page -->
@@ -101,6 +128,8 @@ Travis Knoll
 <!-- jquery -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <!-- plugins -->
+<script type="text/javascript" src="js/plugins/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="js/plugins/jquery-ui-1.11.4-2.custom/jquery-ui.min.js"></script>
 
 
 <!-- main -->
